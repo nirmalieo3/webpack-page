@@ -1,0 +1,334 @@
+:root {
+  --pink: #ed1250;
+  --pale-yellow: #fff6da;
+  --dark-blue: #042f4b;
+  --orange: #fbc99d;
+  
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  background-color: black;
+}
+
+
+nav {
+  display: block;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  width: 150px;
+  float: left;
+}
+
+.links {
+    padding-top: 1rem;
+    /*display: none;*/
+    flex-direction: column;
+    width: 20%;
+    font-size: 30px;
+  }
+  .links li {
+    text-align: center;
+    padding: 5rem 1rem;
+    display: block;
+    color: white;
+  }
+  .links li:hover {
+   
+    color: var(--pale-yellow);
+    color:red;
+  }
+  .links.active {
+    display: block;
+  }
+}
+
+h2 {
+  
+  font-size: 2rem ;
+  float: left;
+  width: 80%;
+  color: red;
+}
+
+li {
+  font-family: var(--poppins);
+  list-style: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+
+[item] {
+  display: none;
+}
+
+.active[item] {
+  display: block;
+}
+
+.content h1 {
+ 
+  font-size: 6rem;
+  text-align: center;
+}
+
+.content p {
+  font-weight: bolder;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#home {
+  height: 100vh;
+  background: url(./images/photo3.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+
+#home .tasty {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+}
+
+#home h1 {
+  background: linear-gradient(to right, var(--pink) 0%, var(--orange) 100%);
+  background-clip: text;
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tasty p {
+  color: black;
+  letter-spacing: 2px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.btn{
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.order{
+  padding: 8px 22px;
+  border-radius: 25px;
+  background: pink;
+  text-decoration: none;
+  color: black;
+  font-size: 1.8rem;
+  font-family: var(--poppins);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.order:hover {
+  background: #ce103f;
+}
+
+ .info {
+  position: absolute;
+  top: 70%;
+  right: 2%;
+  margin: 0 auto;
+  width: 300px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 30px;
+ }
+
+.address,
+.hours,
+.phone {
+  
+  font-size: 2rem;
+  display:block
+  color: yellow;
+  padding: 1rem;
+}
+
+.address p,
+.hours p {
+  
+  text-align: left;
+  font-size: 20px;
+  color:white;
+}
+
+#menu{
+   background: url(./images/background.jpg);
+  background-size: cover;
+  float: left;
+  width: 80%;
+}
+
+.menu-tasty {
+  float: left;
+  margin-left:40%;
+  padding-top: 5px;
+  align-items: center;
+ }
+
+.menu-tasty h1 {
+  font-family: var(--sansita);
+  font-size: calc(3rem + 1vw);
+  color: rgb(36, 36, 36);
+  position: relative;
+}
+
+.menu-container {
+  float:left;
+  width: 80%;
+  display:block;
+  margin-left: 10%;
+  padding: calc(2rem + 2vw);
+  border-radius: 1.2rem;
+  background-color: pink;
+  opacity: .6;
+  margin-top: 70px;
+ }
+
+#menu .menu-item {
+  float:left;
+  margin-bottom: 1rem;
+  padding-bottom: 4rem;
+  display: block;
+  width:500px;
+  padding-top: 20px;
+  height: 300px;
+   margin-left: 15%;
+}
+
+#menu .menu-item img {
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.first,.second {
+   float:left;
+  width:250px;
+  margin-bottom: 2rem;
+  display: block;
+  margin-top: .5rem;
+  font-size: 25px;
+}
+
+.second {
+   top: 230px;
+  right:200px;
+}
+
+.first{
+  padding-top: 200px;
+}
+
+#menu .item-content {
+  padding: 0 1rem;
+}
+
+#menu .item-content h4 {
+  
+  font-size: calc(1rem + 0.5vw);
+  font-weight: bolder;
+  border-bottom: 1px dashed #333;
+  color: var(--dark-blue);
+}
+
+#menu .item-content span {
+  font-size: calc(0.8rem + 0.5vw);
+  float: right;
+  color: var(--pink);
+}
+
+#menu .item-content p {
+  font-size: calc(1rem + 0.5vw);
+  padding-top: 1rem;
+  text-align: justify;
+ 
+}
+
+ #contact {
+  padding-top: 2rem;
+  float:left;
+  align-items: center;
+  width: 80%;
+  background-image: url('./images/contact.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+ 
+}
+
+#contact h1 {
+  font-size: 40px;
+  margin-top: 10px;
+  color: white;
+  margin-left: 50%;
+}
+
+#contact .contact-container {
+  margin-top: 2rem;
+  background: rgba(255, 68, 68, 0.28);
+  width: 80%;
+  border-radius: 1.2rem;
+  margin-left: 12%;
+  float:left;
+ }
+
+#contact .contact-container h3 {
+  font-size: 2rem;
+  font-weight: lighter;
+  color: var(--pink);
+}
+
+.contact-form{
+  float:left;
+  width: 600px;
+  height: 400px;
+ }
+
+.input-box{
+  position: relative;
+  margin-top: 3rem;
+  font-size: 2rem;
+  color:white;
+}
+
+.input-box input{
+  padding:12px;
+  width: 70%;
+  font-size: 2rem;
+}
+
+.input-box textarea{
+   padding:0;
+   width: 70%;
+   font-size: 2rem;
+}
+
+ .submit{
+   padding: 15px;
+   width: 150px;
+   margin-top: 15px;
+ }
+
+
+@media screen and (max-width: 1520px) {
+  
+  #contact iframe {
+    width: calc(100%);
+  }
+}*/
